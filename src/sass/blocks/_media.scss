@@ -1,9 +1,27 @@
+@media (max-width: 1439px) {
+    .sidepanel {
+        display: none;
+    }
+}
+
 @media (max-width: 1200px) {
     .container {
         min-width: 960px;
     }
-    .sidepanel {
-        display: none;
+    .about {
+        &__wrapper {
+            grid-template: 400px 540px;
+            column-gap: 40px;
+        }
+        &__skills {
+            column-gap: 20px;
+            grid-template: repeat(2, minmax(115px, auto))/repeat(2,250px);
+            &-item {
+                grid-template-columns: 40px 195px;
+                -moz-column-gap: 20px;
+                column-gap: 15px;
+            }
+        }
     }
 }
 
@@ -11,6 +29,25 @@
 @media (max-width: 992px) {
     .container {
         min-width: 720px;
+    }
+    .title {
+        &fz_36 {
+            font-size: 30px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 300px 380px;
+        }
+        &__skills {
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px, auto);
+            &-item {
+                grid-template-columns: 40px 320px;
+                -moz-column-gap: 15px;
+                column-gap: 20px;
+            }
+        }
     }
 }
 
@@ -30,6 +67,21 @@
             width: 300px;
         }
     }
+    .about {
+        &__wrapper {
+            grid-template: 400px auto auto / 1fr;
+        }
+        &__photo {
+            grid-row: unset;
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 260px);
+            &-item {
+                grid-template-columns: 40px 200px;
+                column-gap: 20px;
+            }
+        }
+    }
 }
 
 
@@ -39,16 +91,34 @@
         padding: 0 10px;
     }
     .title {
-      &__fz48 {
-        font-size: 26px;
+        &__fz48 {
+            font-size: 26px;
         }  
+        &__fz36 {
+            font-size: 24px;
+        }
     }
     .hamburger {
         right: 20px;
     }
+    .menu {
+        &__block {
+            width: 250px;
+            padding-left: 20px;
+        }
+    }
     .promo {
+        background: url('../img/portret.jpg') no-repeat 57%/cover;
         &__btns {
            margin-top: 30px; 
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template: 340px auto auto/ 1fr;
+        }
+        &__skills {
+            grid-template-columns: 1fr;
         }
     }
     
